@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7.5%;
+    --foreground: 30 5% 88%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Hide scrollbars while keeping functionality */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3d4a3d;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4be277;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(28, 27, 27, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .status-badge-active {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary;
+  }
+
+  .status-badge-maintenance {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-tertiary/10 text-tertiary;
+  }
+
+  .status-badge-offline {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-error/10 text-error;
+  }
+}
+
+@layer utilities {
+  .scroll-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #4be277, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediTrack Pro - Equipment Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#46464e",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary-fixed": "#002109",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#4ae176",
+                        "tertiary-container": "#ef9900",
+                        "on-primary": "#003915",
+                        "surface-tint": "#4ae176",
+                        "on-secondary-fixed": "#1a1b22",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#e3e1ec",
+                        "surface-container-highest": "#353534",
+                        "primary": "#4be277",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353534",
+                        "on-tertiary-container": "#5c3800",
+                        "secondary-container": "#4a4b53",
+                        "on-primary-container": "#004b1e",
+                        "on-secondary-container": "#bcbbc5",
+                        "inverse-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary": "#472a00",
+                        "on-primary-fixed-variant": "#005321",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#6bff8f",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3038",
+                        "tertiary": "#ffba61",
+                        "secondary": "#c6c5cf",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#bccbb9",
+                        "outline-variant": "#3d4a3d",
+                        "outline": "#869585",
+                        "secondary-fixed-dim": "#c6c5cf",
+                        "inverse-primary": "#006e2f",
+                        "primary-container": "#22c55e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(28, 27, 27, 0.6); backdrop-filter: blur(8px); }
+        .scroll-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#1c1b1b] dark:bg-[#1c1b1b]/60 flex flex-col py-6 backdrop-blur-md z-50">
+<div class="px-6 mb-10">
+<h1 class="font-manrope text-xl font-bold text-[#e5e2e1] flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">health_metrics</span>
+                MediTrack Pro
+            </h1>
+<p class="font-manrope text-[10px] uppercase tracking-widest text-[#e5e2e1]/40 mt-1">Clinical Precision</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 text-[#22c55e] border-r-2 border-[#22c55e]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 text-[#e5e2e1]/60 hover:bg-[#201f1f] hover:text-[#e5e2e1]" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                Inventory
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 text-[#e5e2e1]/60 hover:bg-[#201f1f] hover:text-[#e5e2e1]" href="#">
+<span class="material-symbols-outlined">build</span>
+                Maintenance
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 text-[#e5e2e1]/60 hover:bg-[#201f1f] hover:text-[#e5e2e1]" href="#">
+<span class="material-symbols-outlined">group</span>
+                Staff
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 text-[#e5e2e1]/60 hover:bg-[#201f1f] hover:text-[#e5e2e1]" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                Reports
+            </a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-md font-semibold text-xs transition-transform active:scale-95">
+                Quick Add Equipment
+            </button>
+<div class="mt-6 flex items-center gap-3 px-2">
+<img alt="MediTrack Pro Admin Avatar" class="w-10 h-10 rounded-full border border-outline-variant/20" data-alt="Close-up professional portrait of a medical administrator in a dark clinical setting, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEg_6spzwii2C-J3uQjsoYQ2ZPqCW0zSled977wfkK4nqS74llkcnfk_1K8K3Muz1ZESqys6HF7-b-MpLqxu5ZNPFId9MbXYutrzdUNu5GrcJK-gFYlmdBIlrp1vDk-ViwK8xtfcMZBg5GT16OgOXsV91YFBef6PURgfbCOemtfmeSaw2TsixjmSt87OfRSqmabecwkGEo8ZkK9_RWzu8uo-6HT4cTWuGipUfKwWNSbnhSubC5fZlsDvwacc6Fl_iIoPD5zcby3mU"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-on-surface">Dr. Aris Thorne</p>
+<p class="text-[10px] text-on-surface-variant truncate">Chief Operations</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-[#131313] flex justify-between items-center px-8 z-40">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-md w-96">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search medical equipment, logs, or staff..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-[#4be277] cursor-pointer transition-all active:scale-95">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-[#4be277] cursor-pointer transition-all active:scale-95">settings</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-[#4be277] cursor-pointer transition-all active:scale-95">help</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<img alt="Administrator Profile" class="w-8 h-8 rounded-full" data-alt="Minimalist professional headshot of a male doctor in dark medical attire, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC582ocbID0ikR2mEgT2xHiprmAs6eQ2gBTdzHbwJOzCyI9FAc-kRoIM7cACAdP3w-YaWSApT2wt1j1WtAGBIFKl2xPN_VZZiaOEoNTIwoNRkvOO3lNJm1z6bSQriDsLnGo403-X59uoRo9ocezgEJjBhbItEPs-EaTtfrSW22CQiTwkp0RG_RMjDfK5h1xw8h4JD1yBE6tVKOpu45UPcn4wwFr3PCJgjvxz9VxYVU_8gu4nrpxJ_wV5Rh474pcqsEZOHOC4DztAWU"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 mt-16 p-8 min-h-screen">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-manrope text-3xl font-extrabold tracking-tight text-on-surface">Equipment Overview</h2>
+<p class="text-on-surface-variant text-sm mt-1">Real-time health and utilization metrics across all departments.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-md text-xs font-semibold flex items-center gap-2 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Export Report
+                </button>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-md text-xs font-semibold flex items-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span> New Inventory
+                </button>
+</div>
+</div>
+<!-- Stat Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Total Machines -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-primary/20 hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined p-2 bg-primary/10 text-primary rounded-lg">precision_manufacturing</span>
+<span class="text-xs font-bold text-primary flex items-center">+8.5% <span class="material-symbols-outlined text-xs">trending_up</span></span>
+</div>
+<h3 class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Total Machines</h3>
+<p class="font-manrope text-3xl font-bold mt-2">128</p>
+</div>
+<!-- Under Maintenance -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-tertiary/20 hover:border-tertiary transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined p-2 bg-tertiary/10 text-tertiary rounded-lg">engineering</span>
+<span class="text-xs font-bold text-tertiary flex items-center">-3 units <span class="material-symbols-outlined text-xs">arrow_downward</span></span>
+</div>
+<h3 class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Under Maintenance</h3>
+<p class="font-manrope text-3xl font-bold mt-2">14</p>
+</div>
+<!-- Online Consultations -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-primary/20 hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined p-2 bg-primary/10 text-primary rounded-lg">videocam</span>
+<span class="text-xs font-bold text-primary flex items-center">+22.4% <span class="material-symbols-outlined text-xs">trending_up</span></span>
+</div>
+<h3 class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Online Consults</h3>
+<p class="font-manrope text-3xl font-bold mt-2">3,847</p>
+</div>
+<!-- Uptime Rate -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-primary/20 hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined p-2 bg-primary/10 text-primary rounded-lg">timer</span>
+<span class="text-xs font-bold text-primary flex items-center">+1.2% <span class="material-symbols-outlined text-xs">trending_up</span></span>
+</div>
+<h3 class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider">Uptime Rate</h3>
+<p class="font-manrope text-3xl font-bold mt-2">96.3%</p>
+</div>
+</div>
+<!-- Area Chart: Equipment Utilization -->
+<div class="bg-surface-container-low rounded-xl p-8 mb-8 relative overflow-hidden">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="font-manrope text-lg font-bold">Equipment Utilization</h3>
+<p class="text-on-surface-variant text-xs">Comparing operational capacity vs idling across facilities</p>
+</div>
+<div class="flex bg-surface-container rounded-lg p-1">
+<button class="px-4 py-1 text-[10px] font-bold rounded bg-primary text-on-primary">3M</button>
+<button class="px-4 py-1 text-[10px] font-bold rounded text-on-surface-variant hover:text-on-surface transition-colors">30D</button>
+<button class="px-4 py-1 text-[10px] font-bold rounded text-on-surface-variant hover:text-on-surface transition-colors">7D</button>
+</div>
+</div>
+<!-- Mock Chart Graphic -->
+<div class="h-64 relative flex items-end gap-1">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-10">
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
+<div class="border-t border-on-surface-variant w-full"></div>
+</div>
+<!-- Simulated Area Chart -->
+<svg class="w-full h-full preserve-3d" preserveaspectratio="none" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="grad-green" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:rgba(75, 226, 119, 0.4); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(75, 226, 119, 0); stop-opacity:1"></stop>
+</lineargradient>
+<lineargradient id="grad-idle" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:rgba(229, 226, 225, 0.1); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(229, 226, 225, 0); stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<path d="M0,200 L0,150 C100,120 200,180 300,140 C400,100 500,130 600,80 C700,50 800,110 900,40 L1000,60 L1000,200 Z" fill="url(#grad-green)"></path>
+<path d="M0,150 C100,120 200,180 300,140 C400,100 500,130 600,80 C700,50 800,110 900,40 L1000,60" fill="none" stroke="#4be277" stroke-width="3"></path>
+<path d="M0,200 L0,180 C100,190 200,170 300,185 C400,175 500,190 600,170 C700,160 800,180 900,165 L1000,175 L1000,200 Z" fill="url(#grad-idle)"></path>
+<path d="M0,180 C100,190 200,170 300,185 C400,175 500,190 600,170 C700,160 800,180 900,165 L1000,175" fill="none" stroke="rgba(229, 226, 225, 0.3)" stroke-dasharray="8,4" stroke-width="2"></path>
+</svg>
+<div class="absolute bottom-0 left-0 flex gap-8 text-[10px] text-on-surface-variant font-bold uppercase py-4">
+<div class="flex items-center gap-2"><div class="w-3 h-3 bg-primary rounded-full"></div> In Use</div>
+<div class="flex items-center gap-2"><div class="w-3 h-3 bg-on-surface-variant/30 rounded-full"></div> Idle</div>
+</div>
+</div>
+</div>
+<!-- Main Dashboard Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Tabs & Table Section -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Navigation Tabs -->
+<div class="flex items-center border-b border-outline-variant/20 gap-8 overflow-x-auto scroll-hide">
+<button class="pb-4 text-sm font-semibold text-primary border-b-2 border-primary whitespace-nowrap">Overview</button>
+<button class="pb-4 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap flex items-center gap-2">Maintenance Log <span class="bg-surface-container-highest px-2 py-0.5 rounded-full text-[10px]">5</span></button>
+<button class="pb-4 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap flex items-center gap-2">Service Requests <span class="bg-surface-container-highest px-2 py-0.5 rounded-full text-[10px]">9</span></button>
+<button class="pb-4 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Teleconsultancy</button>
+</div>
+<!-- Table -->
+<div class="bg-surface-container rounded-xl overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-surface-container-high">
+<tr>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Equipment</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Department</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Last Serviced</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">biotech</span>
+</div>
+<div>
+<p class="text-sm font-bold">SIEMENS CT-X900</p>
+<p class="text-[10px] text-on-surface-variant">SN: 994-01-A</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Active
+                                    </span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Radiology</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Oct 12, 2023</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">monitor_heart</span>
+</div>
+<div>
+<p class="text-sm font-bold">GE Voluson E10</p>
+<p class="text-[10px] text-on-surface-variant">SN: 211-55-B</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-tertiary/10 text-tertiary">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Maintenance
+                                    </span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Obstetrics</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Jan 04, 2024</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-error">personal_injury</span>
+</div>
+<div>
+<p class="text-sm font-bold">PHILIPS MRI-2.0</p>
+<p class="text-[10px] text-on-surface-variant">SN: 887-34-M</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-error/10 text-error">
+<span class="w-1.5 h-1.5 bg-error rounded-full"></span> Offline
+                                    </span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Diagnostic</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Dec 20, 2023</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">ventilator</span>
+</div>
+<div>
+<p class="text-sm font-bold">DRÄGER Evita V800</p>
+<p class="text-[10px] text-on-surface-variant">SN: 456-22-C</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Active
+                                    </span>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">ICU</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Nov 15, 2023</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Widgets Column -->
+<div class="space-y-8">
+<!-- Machines by Department Donut -->
+<div class="bg-surface-container p-6 rounded-xl">
+<h3 class="font-manrope text-sm font-bold mb-6">Machines by Department</h3>
+<div class="flex items-center justify-center relative py-4">
+<!-- Simulated Donut Chart -->
+<div class="w-40 h-40 rounded-full border-[12px] border-outline-variant/10 relative">
+<div class="absolute -inset-[12px] rounded-full border-[12px] border-primary border-r-transparent border-b-transparent rotate-45"></div>
+<div class="absolute -inset-[12px] rounded-full border-[12px] border-tertiary border-l-transparent border-t-transparent -rotate-12"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<p class="font-manrope text-2xl font-extrabold">128</p>
+<p class="text-[8px] text-on-surface-variant font-bold uppercase">Total Units</p>
+</div>
+</div>
+</div>
+<div class="mt-6 space-y-3">
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-primary"></div> Radiology</div>
+<span class="font-bold">45%</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-tertiary"></div> Cardiology</div>
+<span class="font-bold">28%</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-surface-container-highest"></div> Others</div>
+<span class="font-bold">27%</span>
+</div>
+</div>
+</div>
+<!-- Recent Alerts List -->
+<div class="bg-surface-container p-6 rounded-xl">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-manrope text-sm font-bold">Recent Alerts</h3>
+<span class="text-[10px] text-primary font-bold cursor-pointer hover:underline">Clear All</span>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4 p-3 rounded-lg bg-error/5 border-l-2 border-error">
+<span class="material-symbols-outlined text-error text-xl">error</span>
+<div>
+<p class="text-xs font-bold">MRI-2.0 Offline</p>
+<p class="text-[10px] text-on-surface-variant">Power surge detected in Diagnostic B wing.</p>
+<p class="text-[9px] text-error/60 mt-1 font-semibold uppercase">2 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-lg bg-tertiary/5 border-l-2 border-tertiary">
+<span class="material-symbols-outlined text-tertiary text-xl">warning</span>
+<div>
+<p class="text-xs font-bold">CT-X900 Maintenance Due</p>
+<p class="text-[10px] text-on-surface-variant">Scheduled check in 48 hours.</p>
+<p class="text-[9px] text-tertiary/60 mt-1 font-semibold uppercase">1 hour ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-lg bg-surface-container-highest border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">info</span>
+<div>
+<p class="text-xs font-bold">New Inventory Added</p>
+<p class="text-[10px] text-on-surface-variant">3x ICU Ventilators assigned to North Ward.</p>
+<p class="text-[9px] text-on-surface-variant/40 mt-1 font-semibold uppercase">3 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
