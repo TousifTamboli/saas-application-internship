@@ -29,3 +29,11 @@ export function useMachinesByDepartment() {
     select: (data) => data.data,
   });
 }
+
+export function useEnhancedStats() {
+  return useQuery({
+    queryKey: ['dashboard-enhanced'],
+    queryFn: () => dashboardApi.getEnhancedStats(),
+    select: (data) => data.data,
+  });
+}

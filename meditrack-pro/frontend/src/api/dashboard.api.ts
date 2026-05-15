@@ -1,5 +1,5 @@
 import api from './axios';
-import type { ApiResponse, DashboardStats, UtilizationDataPoint, MachinesByDepartmentResponse } from '../types';
+import type { ApiResponse, DashboardStats, UtilizationDataPoint, MachinesByDepartmentResponse, EnhancedStats } from '../types';
 
 export const dashboardApi = {
   getStats: async (): Promise<ApiResponse<DashboardStats>> => {
@@ -14,6 +14,11 @@ export const dashboardApi = {
 
   getMachinesByDepartment: async (): Promise<ApiResponse<MachinesByDepartmentResponse>> => {
     const { data } = await api.get<ApiResponse<MachinesByDepartmentResponse>>('/dashboard/machines-by-department');
+    return data;
+  },
+
+  getEnhancedStats: async (): Promise<ApiResponse<EnhancedStats>> => {
+    const { data } = await api.get<ApiResponse<EnhancedStats>>('/dashboard/enhanced-stats');
     return data;
   },
 };

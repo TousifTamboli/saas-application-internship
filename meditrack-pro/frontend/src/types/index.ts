@@ -156,3 +156,29 @@ export interface AuthResponse {
   token: string;
   user: User;
 }
+
+// ─── ENHANCED DASHBOARD ──────────────────────────────────────────
+export interface EnhancedStats {
+  maintenanceCostData: { type: string; cost: number }[];
+  totalMaintenanceCost: number;
+  monthlyCostTrend: { month: string; cost: number }[];
+  serviceRequestsByPriority: { priority: string; count: number }[];
+  serviceRequestsByStatus: { status: string; count: number }[];
+  totalServiceRequests: number;
+  warranty: { valid: number; expiring: number; expired: number };
+  equipmentByType: { type: string; count: number }[];
+  staffWorkload: { name: string; role: string; department: string; assignedCount: number }[];
+  recentActivity: { type: string; title: string; description: string; severity: string; timestamp: string }[];
+}
+
+// ─── CHAT ─────────────────────────────────────────────────────────
+export interface ChatMessage {
+  role: 'user' | 'assistant';
+  content: string;
+  timestamp?: string;
+}
+
+export interface ChatResponse {
+  success: boolean;
+  data: ChatMessage & { intent: string };
+}

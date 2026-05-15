@@ -13,6 +13,7 @@ import maintenanceRoutes from './routes/maintenance.routes';
 import serviceRequestRoutes from './routes/serviceRequest.routes';
 import staffRoutes from './routes/staff.routes';
 import alertsRoutes from './routes/alerts.routes';
+import chatRoutes from './routes/chat.routes';
 import { errorHandler, notFound } from './middleware/error.middleware';
 
 const app = express();
@@ -43,6 +44,7 @@ app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/service-requests', serviceRequestRoutes);
 app.use('/api/staff', staffRoutes);
 app.use('/api/alerts', alertsRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Error handling
 app.use(notFound);
